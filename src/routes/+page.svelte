@@ -1,22 +1,25 @@
 <script> 
     //components
-    import Animation from "../lib/components/pages/index/Animation.svelte";
     import "../styles.css"
 </script>
-    <article class = "about">
 
-    </article>
+<svelte:head>
+    <title>Главная</title>
+    <meta name="МаЙнКрАфТ" content="лучший сервер майнкрафт" />
+</svelte:head>
 
-    <article class = "news">
-        {#each posts as post}
-            
-        {/each}
-    </article>
+<article class = "about">
 
-    <article class = "download">
-        <section class = "description">
-        </section>
-    </article>
+</article>
+
+<article class = "news">
+
+</article>
+
+<article class = "download">
+
+</article>
+
 <style>
     .download, .news, .about{
         height: 100vh;
