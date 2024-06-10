@@ -12,7 +12,7 @@ const send = async({method, path, data, token}) => {
     }
 
     if (token) {
-        opts.headers['Authorization'] = `Token ${token}`;
+        opts.headers['Authorization'] = `Berear: ${token}`;
     }
 
     const res = await fetch(`${URL}/${path}`, opts);

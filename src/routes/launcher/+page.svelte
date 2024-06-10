@@ -23,7 +23,6 @@
     </select>
 </article>
 
-
 <svelte:component this={selected.component}/>
 
 <style>

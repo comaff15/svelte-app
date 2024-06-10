@@ -41,5 +41,4 @@
         justify-content: center;
         background-color: #f5f6fa;
     }
-
 </style>    
