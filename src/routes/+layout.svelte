@@ -3,14 +3,10 @@
 
 	import Header from "../lib/components/common/Header.svelte";
 	import Footer from "../lib/components/common/Footer.svelte";
-	import Preloading from "../lib/components/common/Preloading.svelte";
+	import Preloading from "./Preloading.svelte";
 </script>
 
 <div class ="app">
-	{#if $navigating}
-		<Preloading/>
-	{/if}
-
 	<Header/>
 
     <main class="content">

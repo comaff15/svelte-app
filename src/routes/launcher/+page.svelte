@@ -1,6 +1,7 @@
 <script>
     import Linux from "../../lib/components/pages/launcher/Linux.svelte";
     import Win from "../../lib/components/pages/launcher/Win.svelte";
+    import Preloading from "../Preloading.svelte";
 
     const options = [
         {os: 'windows', component: Win},
@@ -22,8 +23,8 @@
         {/each}
     </select>
 </article>
-
 <svelte:component this={selected.component}/>
+
 
 <style>
 
