@@ -13,3 +13,5 @@
 <svelte:head>
     <title>Настройки</title>
 </svelte:head>
+
+add logic
