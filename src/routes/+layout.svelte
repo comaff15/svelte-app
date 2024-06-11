@@ -1,13 +1,22 @@
 <script>
+	import {navigating} from '$app/stores'
+
 	import Header from "../lib/components/common/Header.svelte";
 	import Footer from "../lib/components/common/Footer.svelte";
+	import Preloading from "../lib/components/common/Preloading.svelte";
 </script>
 
 <div class ="app">
+	{#if $navigating}
+		<Preloading/>
+	{/if}
+
 	<Header/>
+
     <main class="content">
         <slot/>
     </main>
+
 	<Footer/>
 </div>
 
