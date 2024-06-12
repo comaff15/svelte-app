@@ -8,37 +8,127 @@
     <meta name="МаЙнКрАфТ" content="лучший сервер майнкрафт" />
 </svelte:head>
 
-<article class = "about">
+<link rel="stylesheet" href="https://fontawesome.io/assets/font-awesome/css/font-awesome.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+<article id="info" class="info">
+    <h3><i class="far fa-question-circle"></i> Немного о нашем проекте</h3>
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="content-section">
+             <p>Игровой проект <b>HEXWORLD</b> не имеет аналогов среди проектов MINECRAFT. У нас имеется собственный игровой лаунчер, который обеспечиваниет скачивание и установку игрового клиента 1 кликов. Собственный игровой сайт который удобен большинству пользователей своей простотой и лакончностью.</p>
+             <p> Присоединяйтесь!</p>
+             <br>
+            </div>
+        </div>
 
 </article>
 
-<article class = "news">
+<article class = "news" id="news">
+    <div class="row mb-5 mt-5">
+        <div class="col-lg-6 col-md-12">
+           <div class="vk-post">
+             <div class="post-header"><i class="fas fa-newspaper"></i> НОВОСТЬ #1</div>
+             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <span class="opt-post">
+              <ul>
+                <li><a class="text-right" href="#">Читать подробне..</a></li>
+              </ul>
+            </span>
+           </div>
+        </div>
 
-</article>
-
-<article class = "download">
+        <div class="col-lg-6 col-md-12">
+            <div class="vk-post">
+              <div class="post-header"><i class="fas fa-newspaper"></i> НОВОСТЬ #2</div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+             <span class="opt-post">
+                <ul>
+                    <li><a class="text-right" href="#">Читать подробне..</a></li>
+                  </ul>
+             </span>
+            </div>
+        </div>
+    </div>
 
 </article>
 
 <style>
-    .download, .news, .about{
-        height: 100vh;
-        max-width: 100vw;
+    * {
+    padding: 0;
+    margin: 0;
+}
 
-        margin: 0;
-    }
-    .download{
-        background-color: #f5f6fa;
-    }
-    .news{
-        background-color: #fed330;
-    }
 
-    .about{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        background-color: #f5f6fa;
-    }
+p {
+    color: #efefef!important;
+}
+
+a {
+    color: #FF9800;
+    transition: 0.2s;
+}
+
+a:hover, a:focus {
+    color: #c67600;
+    text-decoration: none;
+}
+
+.vk-post {
+    overflow: hidden;
+    display: block;
+    background-color: #1c1c1c;
+    padding: 20px;
+    border-radius: 5px; 
+    margin-bottom: 35px;
+}
+
+.vk-post > .post-header {
+    overflow: hidden;
+    color: #fff;
+    width: auto;
+    margin: -20px -20px 7px -20px;
+    background-image: url('../../assets/img/no-post-image.png');
+    padding: 25px 20px;
+    font-weight: 600;
+    -webkit-box-shadow: inset 0 -120px 70px -70px #1c1c1c, inset 0 -40px 20px -20px #1c1c1c;
+    box-shadow: inset -1px -16px 70px -70px #1c1c1c, inset 0 -40px 20px -20px #1c1c1c;
+    font-size: 20px;
+}
+
+.vk-post > .opt-post {
+    display: block; 
+    margin-top: 15px;
+    color: #c2c2c2;
+}
+
+.vk-post > .opt-post > ul {
+    margin-top: 35px;
+}
+
+.vk-post > .opt-post > ul > li {
+    display: inline;
+    font-size: 18px;
+    margin: 0px 5px;
+}
+
+.vk-post > .opt-post > ul > li > a {
+    color: #c2c2c2;
+    padding: 5px 10px;
+    border: 2px solid #c2c2c2;
+    border-radius: 10px;
+    margin: -6px 10px;
+    float: right;
+    transition: 0.4s;
+}
+
+.vk-post > .opt-post > ul > li > a:hover {
+    color: #303030!important;
+    background: #c2c2c2;
+}
+
+.vk-post > .opt-post > ul > li > a:hover {
+    text-decoration: none;
+}
+
 </style>    
