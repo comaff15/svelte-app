@@ -1,5 +1,4 @@
 <script>
-
 </script>
 
 <svelte:head>
@@ -9,14 +8,13 @@
 
 <article class="news">
     <section class="news_list">
-        <section class="news_item">
-            <section class="news_image" style="background-image: url('{New3}');"></section>
+                <a href="#link3" class="news_item">
+            <section class="news_image" style="background-image: url('');"></section>
             <div class="news_content">
                 <h2 class="news_title">Новость 3</h2>
                 <p class="news_description">Описание второй новости. Это краткое описание содержания новости.</p>
             </div>
-            <a href="">смотреть</a>
-        </section>
+        </a>
     </section>
 </article>
 

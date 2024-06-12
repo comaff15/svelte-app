@@ -1,7 +1,4 @@
 <script>
-    import NewsImage1 from '$lib/images/sakura.jpg';
-    import NewsImage2 from '$lib/images/header.jpg';
-
     let playerName = 'PlayerName'; 
     let playerTag = '#1234'; 
     let userDescription = 'Пользователь еще не добавил информацию о себе'; 
@@ -12,7 +9,7 @@
     <section class="profile__content">
         <!-- Аватар пользователя -->
         <section class="profile__avatar">
-            <img src="{NewsImage2}" alt="Аватар пользователя">
+            <img src="" alt="Аватар пользователя">
         </section>
 
         <section class="profile__info">
@@ -29,7 +26,7 @@
         
         <!-- Кнопка настроек -->
         <section class="profile__settings">
-            <button class="settings-button">Настройки</button>
+            <button on:click={() => window.location.href='/settings'} class="nav-item nav-link">Настройки</button>  
         </section>
     </section>
 </article>
