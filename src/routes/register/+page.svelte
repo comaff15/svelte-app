@@ -1,7 +1,3 @@
-<link rel="stylesheet" href="https://fontawesome.io/assets/font-awesome/css/font-awesome.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-
 <div class="container">
     <div class="clear-fix-container">
       
@@ -10,7 +6,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="content-section">
-            <p>Привет! Чтобы не возникали проблемы в будущем при игре на нашем игровом проекте, предлагаем прочитать <b>игровые правила.</b> В случае их нарушения, игрок будет заблокирован, а все ресурсы добыты им во время игрового процесса будут удалены или заблокированы в зависимости от нарушенного пункта правил. Мы являемся бесплатным сервером, и поэтому предоставляем игровой процесс "как есть". Если ты согласен, то мы можем продолжить регистрацию на проекте c;</p>
+            <p>Привет!Мы являемся бесплатным сервером, и поэтому предоставляем игровой процесс "как есть". Если ты согласен, то мы можем продолжить регистрацию на проекте:</p>
             <form action="" method="POST" class="register">
               <div class="form-group">
                 <label for="login"><i class="fas fa-user"></i> Введите желаемый логин</label>
