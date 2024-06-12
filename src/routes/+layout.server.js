@@ -4,8 +4,7 @@ export const load = ({locals}) => {
     return {
         user: locals.user && {
             usernamame: locals.user.usernamame,
-            email: locals.user.email,
-            bio: locals.user.bio,
+            password: locals.user.password,
         }
     }
 }

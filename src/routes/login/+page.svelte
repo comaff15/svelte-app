@@ -1,6 +1,5 @@
 <div class="container">
     <div class="clear-fix-container">
-      
       <section id="auth" class="auth mt-5">
         <h3><i class="fas fa-user-plus"></i><i> Вход в аккаунт</h3>
         <div class="row">

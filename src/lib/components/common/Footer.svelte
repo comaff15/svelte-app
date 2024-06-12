@@ -1,8 +1,6 @@
 <article class="fon">
   <div class="container">
     <div class="clear-fix-container">
-  
-      <!-- Футер. На всех страницах -->
         <footer class="down-footer">
             <div class="row">
               <div class="col-lg-4 col-md-4">
