@@ -7,34 +7,32 @@
     <title>FunnyCraft - ИГРОВОЙ СЕРВЕР MINECRAFT</title>
   </head>
 
-    <div class="container">
-      <div class="clear-fix-container">
-
-        <div class="row">
-          <div class="col">
-            <img src="./assets/img/logo.png" class="logoType" alt="hexworld logotype">
-          </div>
-          <div class="col d-flex justify-content-end align-items-center">
-              <a class="btn btn-hex-gray mr-2 btn-lg start" href=""><i class="fas fa-play"></i> Скачать лаунчер</a>
-            </div>
+  <div class="container">
+    <div class="clear-fix-container">
+      <div class="row">
+        <div class="col">
+          <img src="./assets/img/logo.png" class="logoType" alt="hexworld logotype">
         </div>
-
-          <nav class="navbar navbar-expand-lg navbar-dark navbar-hex">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-              <div class="navbar-nav mr-auto">
-                <button on:click={() => window.location.href='/'} class="nav-item nav-link">Главная</button> 
-                <button on:click={() => window.location.href='/news'} class="nav-item nav-link">Новости</button> 
-                <button on:click={() => window.location.href='login'} class="nav-item nav-link">Войти</button>
-                <button on:click={() => window.location.href='/profile'} class="nav-item nav-link">Профиль</button> 
-                <button on:click={() => window.location.href='/register'} class="nav-item nav-link">Регистрация</button> 
-                <button on:click={() => window.location.href='/login'} class="nav-item nav-link">Войти</button>  
-              </div>
-            </div>
-        </nav>
+        <div class="col d-flex justify-content-end align-items-center">
+          <a class="btn btn-launcher btn-lg start" href=""><i class="fas fa-play"></i> Скачать лаунчер</a>
+        </div>
       </div>
+  
+      <nav class="navbar navbar-expand-lg navbar-dark navbar-hex">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav w-100 d-flex justify-content-between">
+            <button on:click={() => window.location.href='/'} class="nav-item nav-link">Главная</button>
+            <button on:click={() => window.location.href='/news'} class="nav-item nav-link">Новости</button>
+            <button on:click={() => window.location.href='/profile'} class="nav-item nav-link">Профиль</button>
+            <button on:click={() => window.location.href='/register'} class="nav-item nav-link">Регистрация</button>
+            <button on:click={() => window.location.href='/login'} class="nav-item nav-link">Войти</button>
+          </div>
+        </div>
+      </nav>
+    </div>
   </div>
 
 <style>
@@ -43,7 +41,7 @@
     margin: 0;
 }
 button {
-    color: #FF9800;
+    color: #fa9600;
     transition: 0.2s;
 }
 a {
@@ -57,16 +55,31 @@ a:hover, a:focus {
 }
 
 .container {
-    max-width: 100%;
-    margin: 0 auto;
-    max-width: 1170px;
+    width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px; 
 }
 
 .clear-fix-container {
     margin-top: 3%;
 }
 
+.btn-launcher {
+    background-color: #FF9800;
+    border-color: #FF9800;
+    color: white;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+    font-size: 20px; /* увеличение размера текста */
+    padding: 15px 25px; /* увеличение внутренних отступов */
+    border-radius: 10px; /* увеличение радиуса границы */
+  }
 
+.btn-launcher:hover, .btn-launcher:focus {
+    background-color: #f57c00;
+    border-color: #f57c00;
+    color: white;
+  }
+  
 img.logoType {
     width: 50%;
     padding-top: 25px;

@@ -7,50 +7,51 @@
     <title>Главная</title>
     <meta name="МаЙнКрАфТ" content="лучший сервер майнкрафт" />
 </svelte:head>
-
-<article id="info" class="info">
-    <h3>
-        <i class="far fa-question-circle"></i> Немного о нашем проекте
-    </h3>
-    <div class="row">
-    <div class="col-lg-8">
-        <div class="content-section">
-            <p>Игровой проект <b>HEXWORLD</b> не имеет аналогов среди проектов MINECRAFT. У нас имеется собственный игровой лаунчер, который обеспечиваниет скачивание и установку игрового клиента 1 кликов. Собственный игровой сайт который удобен большинству пользователей своей простотой и лакончностью.</p>
-            <p> Присоединяйтесь!</p>
-            <br>
-        </div>
-    </div>
-
-</article>
-
-<article class = "news" id="news">
-    <div class="row mb-5 mt-5">
-        <div class="col-lg-6 col-md-12">
-           <div class="vk-post">
-             <div class="post-header"><i class="fas fa-newspaper"></i> НОВОСТЬ</div>
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            <span class="opt-post">
-              <ul>
-                <li><a class="text-right" href="#">Читать подробне..</a></li>
-              </ul>
-            </span>
-           </div>
-        </div>
-
-        <div class="col-lg-6 col-md-12">
-            <div class="vk-post">
-              <div class="post-header"><i class="fas fa-newspaper"></i> НОВОСТЬ #2</div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-             <span class="opt-post">
-                <ul>
-                    <li><a class="text-right" href="#">Читать подробне..</a></li>
-                  </ul>
-             </span>
+<dev class="container">
+    <article id="info" class="info">
+        <h3>
+            <i class="far fa-question-circle"></i> Немного о нашем проекте
+        </h3>
+        <div class="row">
+        <div class="col-lg-8">
+            <div class="content-section">
+                <p>Игровой проект <b>HEXWORLD</b> не имеет аналогов среди проектов MINECRAFT. У нас имеется собственный игровой лаунчер, который обеспечиваниет скачивание и установку игрового клиента 1 кликов. Собственный игровой сайт который удобен большинству пользователей своей простотой и лакончностью.</p>
+                <p> Присоединяйтесь!</p>
+                <br>
             </div>
         </div>
-    </div>
 
-</article>
+    </article>
+
+    <article class = "news" id="news">
+        <div class="row mb-5 mt-5">
+            <div class="col-lg-6 col-md-12">
+            <div class="vk-post">
+                <div class="post-header"><i class="fas fa-newspaper"></i> НОВОСТЬ</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <span class="opt-post">
+                <ul>
+                    <li><a class="text-right" href="#">Читать подробне..</a></li>
+                </ul>
+                </span>
+            </div>
+            </div>
+
+            <div class="col-lg-6 col-md-12">
+                <div class="vk-post">
+                <div class="post-header"><i class="fas fa-newspaper"></i> НОВОСТЬ #2</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <span class="opt-post">
+                    <ul>
+                        <li><a class="text-right" href="#">Читать подробне..</a></li>
+                    </ul>
+                </span>
+                </div>
+            </div>
+        </div>
+
+    </article>
+</dev>
 
 <style>
     * {
@@ -58,6 +59,11 @@
     margin: 0;
 }
 
+.container {
+    width: 1200px; /* Set your desired fixed width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Optional: add some padding */
+}
 
 p {
     color: #efefef!important;

@@ -8,9 +8,9 @@
 <div class ="app">
 	<Header/>
 
-    <main class="content">
-        <slot/>
-    </main>
+	<main class="content">
+		<slot/>
+	</main>
 
 	<Footer/>
 </div>
