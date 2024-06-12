@@ -15,7 +15,7 @@
                 <h2 class="news_title">Новость 3</h2>
                 <p class="news_description">Описание второй новости. Это краткое описание содержания новости.</p>
             </div>
-            <a href="">смотреть</a>
+            <a href="">Cмотреть</a>
         </section>
     </section>
 </article>
