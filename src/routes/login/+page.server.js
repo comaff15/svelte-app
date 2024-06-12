@@ -1,5 +1,5 @@
 import { fail, redirect } from '@sveltejs/kit';
-import * as api from '$lib/api.js';
+import * as api from '$lib/utils/api.js';
 
 /** @type {import('./$types').PageServerLoad} */
 export async function load({ locals }) {

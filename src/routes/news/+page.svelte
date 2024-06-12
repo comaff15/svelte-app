@@ -1,4 +1,5 @@
 <script>
+
 </script>
 
 <svelte:head>
@@ -8,53 +9,14 @@
 
 <article class="news">
     <section class="news_list">
-                <a href="#link3" class="news_item">
+        <section class="news_item">
             <section class="news_image" style="background-image: url('{New3}');"></section>
             <div class="news_content">
                 <h2 class="news_title">Новость 3</h2>
                 <p class="news_description">Описание второй новости. Это краткое описание содержания новости.</p>
             </div>
-        </a>
-        
-        <a href="#link2" class="news_item">
-            <section class="news_image" style="background-image: url('{New2}');"></section>
-            <section class="news_content">
-                <h2 class="news_title">Новость 2</h2>
-                <p class="news_description">Описание второй новости. Это краткое описание содержания новости.</p>
-            </section>
-        </a>
-        
-        <a href="#link1" class="news_item">
-            <section class="news_image" style="background-image: url('{New1}');"></section>
-            <div class="news_content">
-                <h2 class="news_title">Мы открылись!</h2>
-                <p class="news_description">Скорее заходи на наш сервер</p>
-            </div>
-        </a>
-        <a href="#link3" class="news_item">
-            <section class="news_image" style="background-image: url('{New3}');"></section>
-            <div class="news_content">
-                <h2 class="news_title">Новость 3</h2>
-                <p class="news_description">Описание второй новости. Это краткое описание содержания новости.</p>
-            </div>
-        </a>
-        
-        <a href="#link2" class="news_item">
-            <section class="news_image" style="background-image: url('{New2}');"></section>
-            <section class="news_content">
-                <h2 class="news_title">Новость 2</h2>
-                <p class="news_description">Описание второй новости. Это краткое описание содержания новости.</p>
-            </section>
-        </a>
-        
-        <a href="#link1" class="news_item">
-            <section class="news_image" style="background-image: url('{New1}');"></section>
-            <div class="news_content">
-                <h2 class="news_title">Мы открылись!</h2>
-                <p class="news_description">Скорее заходи на наш сервер</p>
-            </div>
-        </a>
-
+            <a href="">смотреть</a>
+        </section>
     </section>
 </article>
 

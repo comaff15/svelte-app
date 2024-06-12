@@ -8,19 +8,18 @@
     <meta name="МаЙнКрАфТ" content="лучший сервер майнкрафт" />
 </svelte:head>
 
-<link rel="stylesheet" href="https://fontawesome.io/assets/font-awesome/css/font-awesome.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
 <article id="info" class="info">
-    <h3><i class="far fa-question-circle"></i> Немного о нашем проекте</h3>
-        <div class="row">
-          <div class="col-lg-8">
-            <div class="content-section">
-             <p>Игровой проект <b>HEXWORLD</b> не имеет аналогов среди проектов MINECRAFT. У нас имеется собственный игровой лаунчер, который обеспечиваниет скачивание и установку игрового клиента 1 кликов. Собственный игровой сайт который удобен большинству пользователей своей простотой и лакончностью.</p>
-             <p> Присоединяйтесь!</p>
-             <br>
-            </div>
+    <h3>
+        <i class="far fa-question-circle"></i> Немного о нашем проекте
+    </h3>
+    <div class="row">
+    <div class="col-lg-8">
+        <div class="content-section">
+            <p>Игровой проект <b>HEXWORLD</b> не имеет аналогов среди проектов MINECRAFT. У нас имеется собственный игровой лаунчер, который обеспечиваниет скачивание и установку игрового клиента 1 кликов. Собственный игровой сайт который удобен большинству пользователей своей простотой и лакончностью.</p>
+            <p> Присоединяйтесь!</p>
+            <br>
         </div>
+    </div>
 
 </article>
 
@@ -28,7 +27,7 @@
     <div class="row mb-5 mt-5">
         <div class="col-lg-6 col-md-12">
            <div class="vk-post">
-             <div class="post-header"><i class="fas fa-newspaper"></i> НОВОСТЬ #1</div>
+             <div class="post-header"><i class="fas fa-newspaper"></i> НОВОСТЬ</div>
              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
             <span class="opt-post">
               <ul>
