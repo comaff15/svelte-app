@@ -17,7 +17,6 @@ export const actions = {
         const data = await request.formData();
 
         const user = {
-            username: data.get('username'),
             password: data.get('password')
         };
 

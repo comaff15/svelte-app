@@ -13,7 +13,7 @@ export const actions = {
 		const data = await request.formData();
 
 		const user = {
-			username: data.get('login'),
+			login: data.get('login'),
 			password: data.get('password')
 		};
 

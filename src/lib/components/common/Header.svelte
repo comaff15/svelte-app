@@ -12,7 +12,6 @@
               <a class="btn btn-hex-gray mr-2 btn-lg start" href="/launcher"><i class="fas fa-play"></i> Скачать лаунчер</a>
             </div>
         </div>
-
           <nav class="navbar navbar-expand-lg navbar-dark navbar-hex">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>

@@ -13,7 +13,7 @@ export const actions = {
 
 		const body = await api.post('auth/sign-in', {
 			user: {
-				email: data.get('login'),
+				login: data.get('login'),
 				password: data.get('password')
 			}
 		});
