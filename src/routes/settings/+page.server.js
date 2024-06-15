@@ -5,6 +5,8 @@ export const load = ({locals}) => {
     if (!locals.user) redirect(302, '/login')
 }
 
+/** @type {import(./$types).Actions} */
+
 export const actions = {
     logout: async({cookies, locals}) => {
         cookies.delete('jwt', {path: '/'});
