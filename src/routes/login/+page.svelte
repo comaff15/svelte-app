@@ -45,7 +45,7 @@
           </div>
           <div class="col-lg-6 col-md-12">
             <div class="d-flex flex-column align-items-center justify-content-center mt-5">
-              <a class="btn btn-hex-gray w-75 mb-3 mt-3" href="#"><i class="fas fa-question"></i> Я забыл свой пароль, помогите</a>
+              <!-- <a class="btn btn-hex-gray w-75 mb-3 mt-3" href="#"><i class="fas fa-question"></i> Я забыл свой пароль, помогите</a> -->
               <a class="btn btn-hex-gray w-75" href="/register"><i class="fas fa-user-astronaut"></i> Я хочу зарегистрировать новый аккаунт</a>
             </div>
           </div>

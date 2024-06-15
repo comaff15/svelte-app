@@ -12,7 +12,7 @@ const send = async({method, path, data, token}) => {
     }
 
     if (token) {
-        opts.headers['Authorization'] = `${token}`;
+        opts.headers['Authorization'] = `jwt ${token}`;
     }
 
     const res = await fetch(`${URL}/${path}`, opts);

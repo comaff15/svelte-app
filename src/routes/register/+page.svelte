@@ -32,13 +32,13 @@
                 </fieldset>
                 <fieldset class="form-group mt-4">
                     <label for="password"><i class="fas fa-unlock-alt"></i> Введите пароль</label>
-                        <input 
-                            type="password"
-                            name="password"
-                            class="form-control" 
-                            required
-                            placeholder="Введите желаемый пароль"
-                        >
+                    <input 
+                        type="password"
+                        name="password"
+                        class="form-control" 
+                        required
+                        placeholder="Введите желаемый пароль"
+                    >
                     <small>Данный пароль будет использоваться для входа в аккаунт. Используйте пароль не менее 6 символов!</small>
                 </fieldset>
                 <div class="form-group mt-5">

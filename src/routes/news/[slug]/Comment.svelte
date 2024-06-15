@@ -10,13 +10,13 @@
         <p class="card-text">{comment.body}</p>
     </div>
     <div class="card-footer">
-        <a href="/profile/@{comment.author.username}" class="comment-author">
-			{comment.author.username}
+        <a href="/profile/{comment.author.login}" class="comment-author">
+			{comment.author.login}
 		</a>
 
-		<span class="date-posted">{new Date(comment.createdAt).toDateString()}</span>
+		<!-- <span class="date-posted">{new Date(comment.createdAt).toDateString()}</span> -->
 
-		{#if user && comment.author.username === user.username}
+		{#if user && comment.author.login === user.login}
 			<form use:enhance method="POST" action="?/deleteComment&id={comment.id}" class="mod-options">
 				<button class="ion-trash-a" aria-label="Delete comment" />
 			</form>
