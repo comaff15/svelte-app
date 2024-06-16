@@ -1,21 +1,22 @@
-import { error } from "@sveltejs/kit";
+import { error, json } from "@sveltejs/kit";
 import { API_URL } from "$env/static/private"
-
-const URL = API_URL
 
 const send = async({method, path, data, token}) => {
     const opts = {method, headers: {}};
 
     if (data) {
         opts.headers['Content-type'] = 'application/json';
-        opts.body = JSON.stringify(data);
+
+        opts.body = data
     }
 
     if (token) {
-        opts.headers['Authorization'] = `jwt ${token}`;
+        opts.headers['Authorization'] = `Berear ${token}`;
     }
 
-    const res = await fetch(`${URL}/${path}`, opts);
+    console.log(`${API_URL}/${path}`, opts)
+
+    const res = await fetch(`${API_URL}/${path}`, opts);
 
     if (res.ok || res.status === 422) {
         const text = await res.text()

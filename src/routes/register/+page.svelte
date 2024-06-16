@@ -44,11 +44,12 @@
                 <div class="form-group mt-5">
                     <button class="btn btn-hex-gray" type="submit"><i class="fas fa-align-justify"></i> Зарегистрироваться</button>
                 </div>
-                <h1 class="text-xs-center">Войти</h1>
-				<p class="text-xs-center">
-					<button href="/login">Уже есть аккаунт?</button>
-				</p>
             </form>
+            <div class="col-lg-6 col-md-12">
+                <div class="d-flex flex-column align-items-center justify-content-center mt-5">
+                  <a class="btn btn-hex-gray w-75" href="/login"><i class="fas fa-user-astronaut"></i> Уже есть аккаунт?</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -31,8 +31,8 @@
                   </li>
                   {#if $page.data.user}
                     <li class="nav-item">
-                      <a class="nav-link" href = "/profile/@{$page.user.username}">
-                        {$page.user.username}
+                      <a class="nav-link" href = "/profile/@{$page.user.login}">
+                        {$page.user.login}
                       </a>
                     </li>
                   {:else}
