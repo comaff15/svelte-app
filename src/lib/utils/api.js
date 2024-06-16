@@ -1,4 +1,4 @@
-import { error, json } from "@sveltejs/kit";
+import { error} from "@sveltejs/kit";
 import { API_URL } from "$env/static/private"
 
 const send = async({method, path, data, token}) => {
@@ -6,8 +6,7 @@ const send = async({method, path, data, token}) => {
 
     if (data) {
         opts.headers['Content-type'] = 'application/json';
-
-        opts.body = data
+        opts.body = JSON.stringify(data)
     }
 
     if (token) {
