@@ -6,21 +6,18 @@ export const load = ({locals}) => {
 }
 
 export const actions = {
-    logout: async ({cookies, locals}) => {
+    logout: async({cookies, locals}) => {
         cookies.delete('jwt', {path: '/'});
         locals.user = null;
     },
-    
-    save: async ({cookies, locals, request}) => {
+
+    save: async({cookies, locals, request}) => {
         if (!locals.user) error(401);
 
         const data = await request.formData();
 
         const user = {
-            username: data.get('username'),
-            email: data.get('email'),
-            password: data.get('password'),
-            bio: data.get('bio')
+            password: data.get('password')
         };
 
         const body = await api.put('user', {user}, locals.user.token);

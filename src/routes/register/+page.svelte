@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="https://fontawesome.io/assets/font-awesome/css/font-awesome.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <div class="container">
     <div class="clear-fix-container">
       
@@ -8,19 +6,19 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="content-section">
-              <p>Привет! Чтобы не возникали проблемы в будущем при игре на нашем игровом проекте, предлагаем прочитать <b>игровые правила.</b> В случае их нарушения, игрок будет заблокирован, а все ресурсы добыты им во время игрового процесса будут удалены или заблокированы в зависимости от нарушенного пункта правил. Мы являемся бесплатным сервером, и поэтому предоставляем игровой процесс "как есть". Если ты согласен, то мы можем продолжить регистрацию на проекте c;</p>
-              <form action="" method="POST" class="register">
-                <fieldset class="form-group mt-4">
-                  <label for="login"><i class="fas fa-user"></i> Введите желаемый логин</label>
-                  <input type="text" class="form-control form-control-lg" name="username" required placeholder="Введите ваш логин">
-                  <small>Данный логин будет использоваться на наших игровых серверах. Его не возможно изменить после регистрации, поэтому выбирайте его с умом!</small>
-                </fieldset>
-                <fieldset class="form-group mt-4">
-                  <label for="email"><i class="fas fa-envelope"></i> Введите желаемую почту</label>
-                  <input type="email" class="form-control form-control-lg" name="email" required placeholder="Введите желаемую почту">
-                  <small>Данная почта будет привязана к вашему аккаунту. Она позволит восстановить аккаунт в случае утери или взлома. Указывайте настоящую почту, ведь на нее придет письмо с проверкой!</small>
-                </fieldset>
-                <fieldset class="form-group mt-4">
+            <p>Привет!Мы являемся бесплатным сервером, и поэтому предоставляем игровой процесс "как есть". Если ты согласен, то мы можем продолжить регистрацию на проекте:</p>
+            <form action="" method="POST" class="register">
+              <div class="form-group">
+                <label for="login"><i class="fas fa-user"></i> Введите желаемый логин</label>
+                <input type="text" class="form-control" id="login" placeholder="Введите ваш логин">
+                <small>Данный логин будет использоваться на наших игровых серверах. Его не возможно изменить после регистрации, поэтому выбирайте его с умом!</small>
+              </div>
+              <div class="form-group mt-4">
+                <label for="email"><i class="fas fa-envelope"></i> Введите желаемую почту</label>
+                <input type="email" class="form-control" id="email" placeholder="Введите желаемую почту">
+                <small>Данная почта будет привязана к вашему аккаунту. Она позволит восстановить аккаунт в случае утери или взлома. Указывайте настоящую почту, ведь на нее придет письмо с проверкой!</small>
+              </div>
+              <div class="form-group mt-4">
                   <label for="password"><i class="fas fa-unlock-alt"></i> Введите пароль</label>
                   <input type="password" class="form-control form-control-lg" name="password" required placeholder="Введите желаемый пароль">
                   <small>Данный пароль будет использоваться для входа в аккаунт. Используйте пароль не менее 6 символов!</small>

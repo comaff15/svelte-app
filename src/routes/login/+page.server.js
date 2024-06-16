@@ -11,9 +11,9 @@ export const actions = {
 	default: async ({ cookies, request }) => {
 		const data = await request.formData();
 
-		const body = await api.post('users/login', {
+		const body = await api.post('auth/sign-in', {
 			user: {
-				email: data.get('email'),
+				login: data.get('login'),
 				password: data.get('password')
 			}
 		});

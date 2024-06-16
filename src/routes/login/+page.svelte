@@ -1,13 +1,12 @@
 <div class="container">
-  <div class="clear-fix-container">
-    
-    <section id="auth" class="auth mt-5">
-      <h3><i class="fas fa-user-plus"></i><i> Вход в аккаунт</h3>
-      <div class="row">
-        <div class="col">
-          <div class="content-section">
-            <form use:enhance method="POST">
-                <fieldset class="form-group mt-4">
+    <div class="clear-fix-container">
+      <section id="auth" class="auth mt-5">
+        <h3><i class="fas fa-user-plus"></i><i> Вход в аккаунт</h3>
+        <div class="row">
+          <div class="col-lg-6 col-md-12 first">
+            <div class="content-section">
+              <form action="" method="POST">
+                  <div class="form-group mt-4">
                   <label for="login"><i class="fas fa-user"></i> Введите логин</label>
                   <input type="text" class="form-control form-control-lg" name="username" required placeholder="Your Name">
                 </fieldset>

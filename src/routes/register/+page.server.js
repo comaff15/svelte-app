@@ -13,12 +13,11 @@ export const actions = {
 		const data = await request.formData();
 
 		const user = {
-			username: data.get('username'),
-			email: data.get('email'),
+			login: data.get('login'),
 			password: data.get('password')
 		};
 
-		const body = await api.post('users', { user });
+		const body = await api.post('auth/sign-up', { user });
 
 		if (body.errors) {
 			return fail(401, body);
