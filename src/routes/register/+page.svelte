@@ -1,3 +1,11 @@
+<script>
+    import {enhance} from "$app/forms";
+    import ListError from "../../lib/components/common/ListError.svelte";
+
+    /** @type {import('./$types').ActionData}*/
+    export let form;
+</script>
+
 <div class="container">
     <div class="clear-fix-container">
       
@@ -7,29 +15,41 @@
           <div class="col-lg-12">
             <div class="content-section">
             <p>Привет!Мы являемся бесплатным сервером, и поэтому предоставляем игровой процесс "как есть". Если ты согласен, то мы можем продолжить регистрацию на проекте:</p>
-            <form action="" method="POST" class="register">
-              <div class="form-group">
-                <label for="login"><i class="fas fa-user"></i> Введите желаемый логин</label>
-                <input type="text" class="form-control" id="login" placeholder="Введите ваш логин">
-                <small>Данный логин будет использоваться на наших игровых серверах. Его не возможно изменить после регистрации, поэтому выбирайте его с умом!</small>
-              </div>
-              <div class="form-group mt-4">
-                <label for="email"><i class="fas fa-envelope"></i> Введите желаемую почту</label>
-                <input type="email" class="form-control" id="email" placeholder="Введите желаемую почту">
-                <small>Данная почта будет привязана к вашему аккаунту. Она позволит восстановить аккаунт в случае утери или взлома. Указывайте настоящую почту, ведь на нее придет письмо с проверкой!</small>
-              </div>
-              <div class="form-group mt-4">
-                  <label for="password"><i class="fas fa-unlock-alt"></i> Введите пароль</label>
-                  <input type="password" class="form-control form-control-lg" name="password" required placeholder="Введите желаемый пароль">
-                  <small>Данный пароль будет использоваться для входа в аккаунт. Используйте пароль не менее 6 символов!</small>
+            
+            <ListError errors={form?.errors}/>
+
+            <form use:enhance method="POST" class="register">
+                <fieldset class="form-group">
+                    <label for="login"><i class="fas fa-user"></i> Введите желаемый логин</label>
+                    <input 
+                        type="text" 
+                        class="form-control"
+                        placeholder="Введите ваш логин"
+                        required
+                        name="login"
+                    >
+                    <small>Данный логин будет использоваться на наших игровых серверах. Его не возможно изменить после регистрации, поэтому выбирайте его с умом!</small>
                 </fieldset>
                 <fieldset class="form-group mt-4">
-                  <label for="password2"><i class="fas fa-unlock-alt"></i> Повторите введеный пароль</label>
-                  <input type="password" class="form-control form-control-lg" name="password2" required placeholder="Повторите введеный пароль">
-                  <small>Повторите пароль, который вы писали выше. Это позволяет проверить, хорошо ли вы запомнили пароль от своего аккаунта или нет.</small>
+                    <label for="password"><i class="fas fa-unlock-alt"></i> Введите пароль</label>
+                    <input 
+                        type="password"
+                        name="password"
+                        class="form-control" 
+                        required
+                        placeholder="Введите желаемый пароль"
+                    >
+                    <small>Данный пароль будет использоваться для входа в аккаунт. Используйте пароль не менее 6 символов!</small>
                 </fieldset>
-                <button class="btn btn-lg btn-primary pull-xs-right mt-4"><i ></i> Зарегистрировать аккаунт на FunnyCraft</button>
-              </form>
+                <div class="form-group mt-5">
+                    <button class="btn btn-hex-gray" type="submit"><i class="fas fa-align-justify"></i> Зарегистрироваться</button>
+                </div>
+            </form>
+            <div class="col-lg-6 col-md-12">
+                <div class="d-flex flex-column align-items-center justify-content-center mt-5">
+                  <a class="btn btn-hex-gray w-75" href="/login"><i class="fas fa-user-astronaut"></i> Уже есть аккаунт?</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -51,12 +71,12 @@ small {
     font-size: 10px;
 }
 
-a {
+button {
     color: #FF9800;
     transition: 0.2s;
 }
 
-a:hover, a:focus {
+button:hover, button:focus {
     color: #c67600;
     text-decoration: none;
 }

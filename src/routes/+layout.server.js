@@ -3,9 +3,9 @@
 export const load = ({locals}) => {
     return {
         user: locals.user && {
-            id: locals.user.id,
             login: locals.user.login,
             password: locals.user.password,
+            role: locals.user.role
         }
     }
 }

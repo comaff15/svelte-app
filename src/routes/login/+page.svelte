@@ -1,3 +1,11 @@
+<script>
+  import {enhance} from '$app/forms';
+  import ListError from '../../lib/components/common/ListError.svelte';
+
+  /** @type {import('./$types').ActionData}*/
+  export let form;
+</script>
+
 <div class="container">
     <div class="clear-fix-container">
       <section id="auth" class="auth mt-5">
@@ -5,28 +13,46 @@
         <div class="row">
           <div class="col-lg-6 col-md-12 first">
             <div class="content-section">
-              <form action="" method="POST">
+
+              <ListError errors={form?.errors} />
+
+              <form use:enhance method="POST">
                   <div class="form-group mt-4">
                   <label for="login"><i class="fas fa-user"></i> Введите логин</label>
-                  <input type="text" class="form-control form-control-lg" name="username" required placeholder="Your Name">
-                </fieldset>
-                <fieldset class="form-group mt-4">
-                  <label for="password"><i class="fas fa-unlock-alt"></i> Введите пароль</label>
-                  <input type="password" class="form-control form-control-lg" name="password" required placeholder="Password">
-                </fieldset>
-                <button class="btn btn-lg btn-primary pull-xs-right mt-4"><i class="fas fa-sign-in-alt"></i> Войти</button>
-            </form>
+                  <input 
+                    name = 'login'
+                    type = "text"
+                    class = "form-control" 
+                    required
+                    placeholder = "Введите ваш логин"
+                  >
+                </div>
+                <div class="form-group mt-4">
+                    <label for="password"><i class="fas fa-unlock-alt"></i> Введите пароль</label>
+                    <input
+                      name = 'password'
+                      type = "password"
+                      required
+                      class = "form-control" 
+                      placeholder = "Введите ваш пароль"
+                    >
+                </div>
+                <div class="form-group mt-5">
+                    <button class="btn btn-hex-gray" type="submit"><i class="fas fa-align-justify"></i> Войти в аккаунт</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <div class="d-flex flex-column align-items-center justify-content-center mt-5">
+              <!-- <a class="btn btn-hex-gray w-75 mb-3 mt-3" href="#"><i class="fas fa-question"></i> Я забыл свой пароль, помогите</a> -->
+              <a class="btn btn-hex-gray w-75" href="/register"><i class="fas fa-user-astronaut"></i> Я хочу зарегистрировать новый аккаунт</a>
+            </div>
           </div>
         </div>
-        <div class="col-lg-6 col-md-12">
-          <div class="d-flex flex-column align-items-center justify-content-center mt-5">
-            <a class="btn btn-hex-gray w-75 mb-3 mt-3" href=""><i class="fas fa-question"></i> Я забыл свой пароль, помогите</a>
-            <a class="btn btn-hex-gray w-75" href=""><i class="fas fa-user-astronaut"></i> Я хочу зарегистрировать новый аккаунт</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+      </section>
+
+    </div>
 </div>
   
 <style>

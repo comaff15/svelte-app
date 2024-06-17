@@ -5,6 +5,7 @@ export const load = ({locals}) => {
     if (!locals.user) redirect(302, '/login')
 }
 
+/** @type {import(./$types).Actions} */
 export const actions = {
     logout: async({cookies, locals}) => {
         cookies.delete('jwt', {path: '/'});
@@ -17,6 +18,8 @@ export const actions = {
         const data = await request.formData();
 
         const user = {
+            login: data.get('login'),
+            status: data.get('status'),
             password: data.get('password')
         };
 
