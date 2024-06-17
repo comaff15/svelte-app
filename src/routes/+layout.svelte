@@ -23,9 +23,11 @@
 	}
 
 	.content {
+		height: 100vh;
 		display: flex;
 		flex-direction: column;
 		box-sizing: border-box;
-        flex: 1 0 auto;   
-	}
+        flex: 1 0 auto; 
+		background-color: #171717;
+	}  
 </style>
