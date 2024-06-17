@@ -1,5 +1,4 @@
 <script>
-    //import {page} from '$app/stores';
     import ArticlePreview from './ArticlePreview.svelte';
 
     export let articles;

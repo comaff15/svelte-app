@@ -1,17 +1,14 @@
 import * as api from '$lib/utils/api';
-import {page_size} from '$lib/utils/constants'
 
-/** {import('./$types).PageServerLoad} */
+/** @type {import ('./$types).PageServerLoad} */
 
 export const load = async({url}) => {
     const page = +(url.searchParams.get('page') ?? '1');
 
-	const q = new URLSearchParams();
+	let page_size = 1
+	let limit = (page - 1) * 20
 
-	q.set('page', page_size);
-	q.set('limit', (page - 1) * page_size);
-
-	const articles = await api.get(`news/list?${q}&sort=createdAt,desc`)
+	const articles = await api.get(`news/list?age=${page_size}&size=${limit}&sort=createdAt,desc`)
     
 	return {
 		articles

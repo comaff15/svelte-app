@@ -4,6 +4,8 @@
 
     /** @type{import('./$types').PageData} */
     export let data;
+
+    console.log(data)
 </script>
 
 <svelte:head>
@@ -35,6 +37,11 @@
         {#if data.profile.login === data.user?.login}
             <section class="profile__settings">
                 <a href="/settings" class="settings-button">Настройки</a>
+            </section>
+        {/if}
+        {#if data.user.role === 'ROLE_ADMIN'}
+            <section class="profile__settings">
+                <a href="/admin" class="settings-button">Админка</a>
             </section>
         {/if}
     </section>

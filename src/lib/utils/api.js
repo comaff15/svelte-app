@@ -37,7 +37,7 @@ export const get = async (path, token) => {
     return sendRequest('GET', path, null ,token);
 }
 
-export const path = async (path, jsonData, token) => {
+export const patch = async (path, jsonData, token) => {
     return sendRequest('PATCH', path, jsonData, token)
 }
 

@@ -10,7 +10,7 @@
                 <div class="post-header">{article.title}</div>
                 <p>{article.body}</p>
                 <span class="opt-post">
-                    <a class="read-more-btn" href='news/{ article.articleId }'>Читать подробнее</a>
+                    <a class="read-more-btn" href={`news/${article.slug}`}>Читать подробнее</a>
                 </span>
             </div>
         </div>
@@ -20,6 +20,7 @@
 <style>
     p {
         color: #efefef !important;
+        height: 100px;
         overflow: hidden;
     }
 

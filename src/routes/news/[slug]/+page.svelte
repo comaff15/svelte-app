@@ -1,6 +1,4 @@
 <script>
-    import CommentContainer from "./CommentContainer.svelte";
-
     /** @type {import('./$types').PageData} */
     export let data;
 </script>
@@ -23,10 +21,5 @@
                 </div>
             </div>
         </section>
-        <hr/>
-        <section class="news-actions"/>
-        <!-- <section class="row">
-                <CommentContainer comments={data.comments} user={data.user} errors={[]}/>
-        </section> -->
     </section>
 </article>

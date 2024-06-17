@@ -3,9 +3,6 @@
 
     import ListError from '../../lib/components/common/ListError.svelte';
 
-    /** @type {import('./$types').PageData} */
-    export let data;
-
     /** @type {import('./$types').ActionData} */
     export let form;
 </script>
@@ -29,36 +26,38 @@
                         }
                     }}
                     method = "POST"
-                    action = "?/save"
+                    action = "?/updateStatus"
                 >
-                    <fieldset class="form-group">
-                        <input
-                            class="form-control form-control-lg"
-                            name="login"
-                            type="text"
-                            placeholder="Логин"
-                            value={data.user.login}
-                        />
-                    </fieldset>
                     <fieldset class="form-group">
                         <input
                             class="form-control form-control-lg"
                             name="status"
                             type="text"
                             placeholder="Статус"
-                            value={data.user.status}
                             />
                     </fieldset>
-                    <fieldset class="form-group">
-                        <input
-                            class="form-control form-control-lg"
-                            name="password"
-                            type="password"
-                            placeholder="Логин"
-                        />
-                    </fieldset>
-                    <button class="btn btn-lg btn-primary pull-xs-right">Обновить настройки</button>
+                    <button class="btn btn-lg btn-primary pull-xs-right">Обновить статус</button>
                 </form>
+                <form
+                use:enhance={()=>{
+                    return ({update}) => {
+                        update({reset: false});
+                    }
+                }}
+                method = "POST"
+                action = "?/updatePassword"
+            >
+                <fieldset class="form-group">
+                    <input
+                        class="form-control form-control-lg"
+                        name="password"
+                        type="password"
+                        placeholder="Логин"
+                    />
+                </fieldset>
+                <button class="btn btn-lg btn-primary pull-xs-right">Обновить пароль</button>
+            </form>
+            <hr/>
                 <hr/>
 
                 <form use:enhance method="POST" action="?/logout">

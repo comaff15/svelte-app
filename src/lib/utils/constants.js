@@ -1,1 +1,1 @@
-const page_size = 20
+const page_size = 10
