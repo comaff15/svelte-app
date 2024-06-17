@@ -13,11 +13,11 @@
               </div>
               <div class="col-lg-8 col-md-8">
                   <div class="social"><h3>Разрабочкики:</h3>
-                    <a href="https://vk.com/ded_mefedron" class="ico"> <i class="fab fa-vk"></i></a>
-                    <a href="https://vk.com/xnor_xnor_xnor" class="ico"> <i class="fab fa-vk"></i></a>
-                    <a href="https://vk.com/idestroyeverything" class="ico"> <i class="fab fa-vk"></i></a>
-                    <a href="https://vk.com/73denis73" class="ico"> <i class="fab fa-vk"></i></a>
-                    <a href="https://vk.com/ti_uje_tut" class="ico"> <i class="fab fa-vk"></i></a>
+                    <a href="https://vk.com/ded_mefedron" class="ico" title="Камиль-Главный разрабочкик"> <i class="fab fa-vk"></i></a>
+                    <a href="https://vk.com/xnor_xnor_xnor" class="ico" title="Иван-Бэкенд разрабочик"> <i class="fab fa-vk"></i></a>
+                    <a href="https://vk.com/ti_uje_tut" class="ico" title="Кирилл-Бэкенд разрабочик"> <i class="fab fa-vk"></i></a>
+                    <a href="https://vk.com/idestroyeverything" class="ico" title="Глеб-Фронтенд разрабочик"> <i class="fab fa-vk"></i></a>
+                    <a href="https://vk.com/73denis73" class="ico" title="Денис-Фронтенд разрабочик"> <i class="fab fa-vk"></i></a>
                     <!-- <a href="discord" class="ico"><i class="fab fa-discord"></i></a>
                     <a href="mailto:mail@mail.ru" class="ico"><i class="fas fa-at"></i></a>
                     <a href="mailto:mail@mail.ru" class="ico"><i class="fas fa-drafting-compass"></i></a> -->
@@ -39,6 +39,10 @@
 
 p {
     color: #efefef!important;
+}
+
+.row {
+    align-items: center;
 }
 
 a {
@@ -66,7 +70,7 @@ a:hover, a:focus {
 }
 
 footer.down-footer {
-    display: block;
+    display: flex;
     margin-top: 10px;
     background-color: #1c1c1c;
     padding: 20px;
@@ -103,17 +107,18 @@ footer.down-footer > * > * > p {
 }
 
 .ico {
-    padding: 10px 17px;
-    color: #c2c2c2;
-    background: #232323;
-    border-radius: 5px;
-    font-size: 24px;
-    margin-left: 10px;
-    transition: 0.3s;
+  position: relative;
+  padding: 10px 17px;
+  color: #c2c2c2;
+  background: #232323;
+  border-radius: 5px;
+  font-size: 24px;
+  margin-left: 10px;
 }
 
 .ico:hover {
-    background-color: #c2c2c2;
-    color: #1c1c1c;
+  background-color: #c2c2c2;
+  color: #1c1c1c;
 }
+
 </style>

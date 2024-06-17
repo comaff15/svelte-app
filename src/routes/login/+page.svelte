@@ -1,7 +1,6 @@
 <script>
   import { enhance } from '$app/forms';
   import ListError from '../../lib/components/common/ListError.svelte';
-  import Animation from '../../lib/components/common/Animation.svelte';
 
   /** @type {import('./$types').ActionData} */
   export let form;
@@ -81,6 +80,9 @@
     max-width: 100%;
     margin: 0 auto;
     max-width: 1170px;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
   }
 
   .clear-fix-container {

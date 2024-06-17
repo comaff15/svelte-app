@@ -89,6 +89,9 @@
         max-width: 100%;
         margin: 0 auto;
         max-width: 1170px;
+        display: flex;
+        flex-direction: column;
+        min-height: 80vh;
     }
 
     .clear-fix-container {
