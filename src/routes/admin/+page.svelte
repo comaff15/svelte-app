@@ -1,1 +1,99 @@
-админка
+<script>
+    /** @type{import('./$types').PageData} */
+    export let data;
+</script>
+
+<svelte:head>
+    <title>{data.profile.login} админ</title>
+</svelte:head>
+
+<article class="profile">
+    <section class="profile__content">
+        <section class="profile__info">
+            <h1>{data.profile.login}</h1>
+
+            {#if data.profile.isOnline === false}
+                <p>Оффлайн</p>
+            {:else}
+                <p>Онлайн</p>
+            {/if}
+        </section>
+
+        
+        <section class="profile__description">
+            <h2>Информация о пользователе:</h2>
+            {#if data.profile.status}
+                <p>{data.profile.status}</p>
+            {:else}
+                <p>Профиль игрока еще нее заполнен</p>
+            {/if}
+        </section>
+        
+        {#if data.profile.login === data.user?.login}
+            <section class="profile__settings">
+                <a href="/settings" class="settings-button">Настройки</a>
+            </section>
+        {/if}
+        {#if data.user.role === 'ROLE_ADMIN'}
+            <section class="profile__settings">
+                <a href="/admin" class="settings-button">Админка</a>
+            </section>
+        {/if}
+    </section>
+</article>
+
+<style>
+    .profile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .profile__content {
+        max-width: 800px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        background-color: #f9f9f9;
+    }
+
+
+    .profile__info {
+        text-align: center;
+    }
+
+    .profile__info h1,
+    .profile__info p {
+        margin: 0;
+    }
+
+    .profile__description {
+        text-align: center;
+    }
+
+    .profile__settings {
+        text-align: center;
+    }
+
+    .settings-button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .settings-button:hover {
+        background-color: #0056b3;
+    }
+
+    .profile__info p {
+        margin: 5px 0;
+    }
+</style>
