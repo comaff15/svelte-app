@@ -6,6 +6,11 @@
     export let data
 </script>
 
+<svelte:head>
+    <title>FunnyCraft-Новости</title>
+    <meta name="description" content="Svelte demo app" />
+</svelte:head>
+
 <article class="news-page">
     <div class="container page">
         <div class="row">
