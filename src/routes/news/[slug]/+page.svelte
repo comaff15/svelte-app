@@ -21,17 +21,12 @@
                 <div>
                     {@html data.news.body}
                 </div>
-                <ul class="tag-list">
-                    {#each data.news.tagList as tag}
-                        <li class=" tag-deffault tag-pill tag-outline">{tag}</li>
-                    {/each}
-                </ul>
             </div>
         </section>
         <hr/>
         <section class="news-actions"/>
-        <section class="row">
+        <!-- <section class="row">
                 <CommentContainer comments={data.comments} user={data.user} errors={[]}/>
-        </section>
+        </section> -->
     </section>
 </article>

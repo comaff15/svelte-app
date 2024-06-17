@@ -14,7 +14,12 @@
     <section class="profile__content">
         <section class="profile__info">
             <h1>{data.profile.login}</h1>
-            <p>{data.profile.isOnline}</p>
+
+            {#if data.profile.isOnline === false}
+                <p>Оффлайн</p>
+            {:else}
+                <p>Онлайн</p>
+            {/if}
         </section>
 
         

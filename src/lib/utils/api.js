@@ -1,43 +1,46 @@
-import { error, json } from "@sveltejs/kit";
+import axios from 'axios';
 import { API_URL } from "$env/static/private"
 
-const send = async({method, path, data, token}) => {
-    const opts = {method, headers: {}};
-
-    if (data) {
-        opts.headers['Content-type'] = 'application/json';
-
-        opts.body = data
-    }
+const sendRequest = async (method, path, jsonData = null, token = null) => {
+    const headers = {
+        'Content-Type': 'application/json'
+    };
 
     if (token) {
-        opts.headers['Authorization'] = `Berear ${token}`;
+        headers['Authorization'] = `Bearer ${token}`;
     }
 
-    console.log(`${API_URL}/${path}`, opts)
+    const config = {
+        method,
+        url: `${API_URL}/${path}`,
+        headers,
+        data: jsonData
+    };
 
-    const res = await fetch(`${API_URL}/${path}`, opts);
-
-    if (res.ok || res.status === 422) {
-        const text = await res.text()
-        return text ? JSON.parse(text) : {};
+    try {
+        const response = await axios(config);
+        return response.data;
+    } catch (error) {
+        throw new Error(error.response.data.message || error.message);
     }
-
-    error(res.status);
 }
 
-export const get = (path, token) => {
-    return send({ method: 'GET', path, token});
+export const post = async (path, jsonData, token) => {
+    return sendRequest('POST', path, jsonData, token);
 }
 
-export const del = (path, token) => {
-    return send({ method: 'DELETE', path, token});
+export const put = async (path, jsonData, token) => {
+    return sendRequest('PUT', path, jsonData, token);
 }
 
-export const post = (path, data, token) => {
-    return send({method: 'POST', path, data, token});
+export const get = async (path, token) => {
+    return sendRequest('GET', path, null ,token);
 }
 
-export const put = (path, data, token) => {
-    return send({method: 'PUT', path, data, token});
+export const path = async (path, jsonData, token) => {
+    return sendRequest('PATCH', path, jsonData, token)
+}
+
+export const del = async (path, token) => {
+    return sendRequest('DELETE', path, null, token);
 }

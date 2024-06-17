@@ -1,9 +1,9 @@
 import * as api from '$lib/utils/api.js';
 
-export const load = async({locals, params}) => {
-    const { profile } = await api.get(`profiles/${params.user}`, locals.user?.token);
+export const load = async({cookies}) => {
+    const profile = await api.get(`account/me`, cookies.get('jwt'));
 
     return {
         profile
-    }
+    } 
 }

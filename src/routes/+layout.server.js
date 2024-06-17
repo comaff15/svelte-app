@@ -3,8 +3,8 @@
 export const load = ({locals}) => {
     return {
         user: locals.user && {
-            login: locals.user.login,
-            password: locals.user.password,
+            id: locals.user.id,
+            login: locals.user.sub,
             role: locals.user.role
         }
     }

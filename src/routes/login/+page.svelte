@@ -21,7 +21,7 @@
                   <label for="login"><i class="fas fa-user"></i> Введите логин</label>
                   <input 
                     name = 'login'
-                    type = "login"
+                    type = "text"
                     class = "form-control" 
                     required
                     placeholder = "Введите ваш логин"

@@ -1,5 +1,6 @@
 <script>
     import {page} from '$app/stores'
+
 </script>
     <div class="container">
       <div class="clear-fix-container">
@@ -31,8 +32,8 @@
                   </li>
                   {#if $page.data.user}
                     <li class="nav-item">
-                      <a class="nav-link" href = "/profile/@{$page.user.login}">
-                        {$page.user.login}
+                      <a class="nav-link" href = "/profile/{$page.data.user.login}">
+                        {$page.data.user.login}
                       </a>
                     </li>
                   {:else}

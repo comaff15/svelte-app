@@ -5,16 +5,11 @@ import {marked} from 'marked'
 import sanitizeHtml from "sanitize-html";
 
 /** @type {import('./types').PageServerLoad} */
-export const laod = async({locals, params}) => {
-    const [{news}, {comments}] = await Promise.all([
-        api.get(`news/${params.slug}`, locals.user?.token),
-        api.get(`news/${params.slug}/comments`, locals.user?.token)
-    ]);
-
-    const dirty = marked(news.body);
-    news.body = sanitizeHtml(dirty);
-
-    return {news, comments};
+export const laod = async({ params}) => {
+    const news = await api.get(`news/${params.slug}`);
+    return {
+        news
+    };
 }
 
 /** @type {import('./$types').Actions} */
@@ -25,13 +20,13 @@ export const actions = {
         const data = await request.formData();
 
         await api.post(
-            `news/${params.slug}/comments`,
+            `post/${params.slug}/comments`,
             {
                 comment: {
                     body: data.get('comment')
                 },
             },
-            locals.user.token
+            cookies.get('jwt')
         );
     },
 
@@ -39,7 +34,7 @@ export const actions = {
         if (locals.user) error(401);
 
         const id = url.searchParams.get('id');
-        const result = await api.del(`news/${params.slug}/comments/${id}`, locals.user?.token);
+        const result = await api.del(`news/${params.slug}/comments/${id}`,  cookies.get('jwt'));
 
         if (result.error) error(result.status, result.error);
     }

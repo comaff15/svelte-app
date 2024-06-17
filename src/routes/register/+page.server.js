@@ -9,7 +9,7 @@ export const load = async({parent}) => {
 
 /** @type {import('./$types').Actions} */
 export const actions = {
-	default: async ({ request }) => {
+	default: async ({ request, res }) => {
 		const data = await request.formData();
 
 		const user = {
@@ -17,9 +17,7 @@ export const actions = {
 			password: data.get('password')
 		};
 
-		console.log(typeof(JSON.stringify(user)))
-
-		const body = await api.post('auth/sign-up', user);
+		const body = await api.post('auth/sign-up', JSON.stringify(user));
 
 		if (body.errors) {
 			return fail(401, body);
