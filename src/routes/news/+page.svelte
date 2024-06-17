@@ -1,90 +1,154 @@
-<script>
-</script>
-
 <svelte:head>
     <title>FunnyCraft-Новости</title>
     <meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<article class="news">
-    <section class="news_list">
-        <section class="news_item">
-            <section class="news_image" style="background-image: url('');"></section>
-            <div class="news_content">
-                <h2 class="news_title">Новость 1</h2>
-                <p class="news_description">Описание первой новости. Это краткое описание содержания новости.</p>
+<div class="container">
+    <article class="news" id="news">
+        <h3>
+            <i class="fas fa-newspaper"></i> Все новости
+        </h3>
+        <div class="row mb-5 mt-5">
+            <div class="col-lg-6 col-md-12">
+                <div class="vk-post">
+                    <div class="post-header">НОВОСТЬ #1</div>
+                    <p>Мы открылись! </p>
+                    <span class="opt-post">
+                        <ul>
+                            <li><a class="read-more-btn" href="/news/1">Читать подробнее</a></li>
+                        </ul>
+                    </span>
+                </div>
             </div>
-        </a>
-            <a href="">Cмотреть</a>
-        </section>
-</article>
+
+            <div class="col-lg-6 col-md-12">
+                <div class="vk-post">
+                    <div class="post-header">НОВОСТЬ #2</div>
+                    <p>Вливайся в игровую индустрию!</p>
+                    <span class="opt-post">
+                        <ul>
+                            <li><a class="read-more-btn" href="/news/2">Читать подробнее</a></li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </article>
+</div>
 
 <style>
-    .news {
-        padding-top: 20px; 
-        margin-bottom: 20px;
-    }
-    .news_list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        
-    }
-    .news_item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    }
-    .news_item {
-        position: relative;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-        max-width: 320px;
-        width: 100%;
-        text-decoration: none; 
-        color: inherit; 
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
     }
 
-    .news_image {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+    .container {
+        width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    p, h3 {
+        color: #efefef !important;
+    }
+
+    a {
+        color: #FF9800;
+        transition: 0.2s;
+    }
+
+    a:hover,
+    a:focus {
+        color: #c67600;
+        text-decoration: none;
+        min-height:1000%;
+    }
+
+    .vk-post {
+        overflow: hidden;
+        display: block;
+        background-color: #1c1c1c;
+        padding: 20px;
+        border-radius: 5px;
+        margin-bottom: 35px;
+        margin: 5px;
+    }
+
+    .vk-post > .post-header {
+        overflow: hidden;
+        color: #fff;
+        width: auto;
+        margin: -20px -20px 7px -20px;
         background-size: cover;
         background-position: center;
-    }
-
-
-    .news_content {
-        position: relative;
-        padding: 100px;
-        background: rgba(255, 255, 255, 0.35);
-        width: 100%; 
-        height: 100%; 
-        
-    }
-
-    .news_title {
+        padding: 25px 20px;
+        font-weight: 600;
+        -webkit-box-shadow: inset 0 -120px 70px -70px #1c1c1c, inset 0 -40px 20px -20px #1c1c1c;
+        box-shadow: inset -1px -16px 70px -70px #1c1c1c, inset 0 -40px 20px -20px #1c1c1c;
         font-size: 20px;
-        margin-bottom: 20px;
     }
 
-    .news_description {
-        font-size: 15px;
-        margin-bottom: 20px;
+    .vk-post > .opt-post {
+        display: block; 
+        margin-top: 15px;
+        color: #ffffff;
+    }
+
+    .vk-post > .opt-post > ul {
+        margin-top: 35px;
+    }
+
+    .vk-post > .opt-post > ul > li {
+        display: inline;
+        font-size: 18px;
+        margin: 0px 5px;
+    }
+
+    .vk-post > .opt-post > ul > li > a {
+        padding: 5px 10px;
+        border: 2px solid #ffffff;
+        border-radius: 10px;
+        margin: -6px 10px;
+        float: right;
+        transition: 0.4s;
+    }
+
+    .vk-post > .opt-post > ul > li > a:hover {
+        color: #303030!important;
+        background: #c2c2c2;
+    }
+
+    .read-more-btn {
+        background-color: #FF9800;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+        text-decoration: none; 
+    }
+
+    .read-more-btn:hover, .read-more-btn:focus {
+        background-color: #c67600;
+        color: #fff;
+        text-decoration: none; 
     }
 
     @media (max-width: 768px) {
-        .news_list {
+        .container {
+            width: 100%;
+            padding: 10px;
+        }
+
+        .row {
+            display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .news_item {
-            max-width: 100%;
+        .col-lg-6, .col-md-12 {
+            width: 100%;
+            padding: 10px;
         }
     }
 </style>
-
-
