@@ -33,7 +33,7 @@
                 <p>Профиль игрока еще нее заполнен</p>
             {/if}
         </section>
-        
+        <section class="profile__btns">
         {#if data.profile.login === data.user?.login}
             <section class="profile__settings">
                 <a href="/settings" class="settings-button">Настройки</a>
@@ -44,6 +44,7 @@
                 <a href="/admin" class="settings-button">Админка</a>
             </section>
         {/if}
+        </section>
     </section>
 </article>
 
@@ -53,6 +54,10 @@
         justify-content: center;
         align-items: center;
         padding: 20px;
+        height: 800px;
+    }
+    h2{
+        font-size: 24px;
     }
 
     .profile__content {
@@ -83,22 +88,32 @@
 
     .profile__settings {
         text-align: center;
+        text-decoration: none;
     }
 
     .settings-button {
         padding: 10px 20px;
-        background-color: #007bff;
-        color: white;
+        margin: 10px;
+        background-color: #FF9800;
+        color: #1c1c1c;
         border: none;
         border-radius: 5px;
         cursor: pointer;
+
+        text-decoration: none;
     }
 
     .settings-button:hover {
-        background-color: #0056b3;
+        background-color: #c67600;
+        text-decoration: none;
     }
 
     .profile__info p {
         margin: 5px 0;
+    }
+    .profile__btns{
+        display: flex;
+        justify-content: center;
+
     }
 </style>

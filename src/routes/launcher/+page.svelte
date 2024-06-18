@@ -24,7 +24,10 @@ function download() {
             </option>
         {/each}
     </select>
-    <button class="download-btn" on:click={download}>Скачать</button>
+    <button class="download-btn" on:click={download}>
+        <a href="http://localhost:8080/api/v1/launcher/" download>
+            Скачать
+    </button>
 </article>
 
 <article class="installation-instructions">
@@ -88,6 +91,11 @@ h1 {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
+}
+
+.download-btn a {
+    text-decoration: none;
+    color: #1c1c1c;
 }
 
 .download-btn:hover, .download-btn:focus {

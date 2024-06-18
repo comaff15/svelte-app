@@ -2,25 +2,16 @@
     export let article;
 </script>
 
-<div class="container">
-    <article class="news" id="news">
-        <h3>
-            <i class="fas fa-newspaper"></i> Все новости
-        </h3>
-        <div class="row mb-5 mt-5">
-            <div class="col-lg-6 col-md-12">
-                <div class="vk-post">
-                    <div class="post-header">{article.title}</div>
-                    <p>{article.body}</p>
-                    <span class="opt-post">
-                        <ul>
-                            <li><a class="read-more-btn" href={`news/${article.slug}`}>Читать подробнее</a>
-                        </ul>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </article>
+<div class="col-lg-6 col-md-12">
+    <div class="vk-post">
+        <div class="post-header">{article.title}</div>
+        <p>{article.body}</p>
+        <span class="opt-post">
+            <ul>
+                <li><a class="read-more-btn" href={`news/${article.slug}`}>Читать подробнее</a>
+            </ul>
+        </span>
+    </div>
 </div>
 
 <style>
@@ -30,17 +21,11 @@
         box-sizing: border-box;
     }
 
-    .container {
-        width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-        display: flex;
-        flex-direction: column;
-        min-height: 80vh;
-    }
 
-    p, h3 {
+    p{
         color: #efefef !important;
+        height: 150px;
+        overflow: clip;
     }
 
     a {
@@ -122,23 +107,5 @@
         background-color: #c67600;
         color: #fff;
         text-decoration: none; 
-    }
-
-    @media (max-width: 768px) {
-        .container {
-            width: 100%;
-            padding: 10px;
-        }
-
-        .row {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .col-lg-6, .col-md-12 {
-            width: 100%;
-            padding: 10px;
-        }
     }
 </style>

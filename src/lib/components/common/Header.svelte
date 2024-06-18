@@ -40,7 +40,7 @@
               </li>
               {#if $page.data.user}
                 <li class="nav-item">
-                  <a class="nav-link" href="/profile/@{$page.user.login}">{$page.user.login}</a>
+                  <a class="nav-link" href="/profile/{$page.data.user.login}">{$page.data.user.login}</a>
                 </li>
               {:else}
                 <li class="nav-item" aria-current={$page.url.pathname === '/register' ? 'page' : undefined}>
